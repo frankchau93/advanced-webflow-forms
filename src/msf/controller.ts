@@ -159,13 +159,12 @@ export default class Controller {
     const step = +dataset - 1;
 
     // Go to requested step only if its lower than the current step
-    if (step < this.currentStep) {
-      this.view.sliderDots[step].click();
-      this.currentStep = step;
-      this.view.setMaskHeight(this.currentStep);
-      this.view.setButtonText(this.currentStep);
-      if (this.currentStep === 0) this.view.disableElement(this.view.back);
-    }
+
+    this.view.sliderDots[step].click();
+    this.currentStep = step;
+    this.view.setMaskHeight(this.currentStep);
+    this.view.setButtonText(this.currentStep);
+    if (this.currentStep === 0) this.view.disableElement(this.view.back);
   }
 
   /**
