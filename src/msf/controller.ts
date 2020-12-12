@@ -164,6 +164,7 @@ export default class Controller {
     this.currentStep = step;
     this.view.setMaskHeight(this.currentStep);
     this.view.setButtonText(this.currentStep);
+    this.view.setStepsDisplay(this.currentStep);
     if (this.currentStep === 0) this.view.disableElement(this.view.back);
   }
 
